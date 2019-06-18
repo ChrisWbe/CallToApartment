@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CallToApartment</string>
+    <string name="n_apartment">Numero Apartamento</string>
+    <string name="n_llamada">Numero de Llamada</string>
+    <string name="agregar_n">Agregar Número</string>
+    <string name="nombre_apartment">Nombre</string>
+    <string name="n_parqueadero">Parqueadero</string>
+    <string name="rbTextCel">Celular</string>
+    <string name="rbTextTel">Fijo</string>
+</resources>
