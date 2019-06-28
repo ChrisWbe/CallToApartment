@@ -1,8 +1,10 @@
 package com.example.calltoapartment.Call;
 
+import android.content.Context;
+
 public interface ICallVMP {
     interface  model{
-        void ordenLlamada(int numero);
+        void ordenLlamada(String numero, Context context);
 
     }
 
@@ -15,6 +17,7 @@ public interface ICallVMP {
     interface view{
         String getNumber();
         void llamada(String numero);
+        Context myContext();
 
     }
 }

@@ -1,6 +1,8 @@
 package com.example.calltoapartment.Call;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -69,6 +71,11 @@ public class CallView extends AppCompatActivity implements ICallVMP.view{
     @Override
     public void llamada(String numero) {
         startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(numero)));
+    }
+
+    @Override
+    public Context myContext() {
+        return this;
     }
 
     class EventoTeclado implements EditText.OnEditorActionListener{

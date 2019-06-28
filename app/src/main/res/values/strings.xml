@@ -7,4 +7,6 @@
     <string name="n_parqueadero">Parqueadero</string>
     <string name="rbTextCel">Celular</string>
     <string name="rbTextTel">Fijo</string>
+    <string name="campoEmpty">Campo vacío</string>
+    <string name="nApartment">Numero de Apartamento</string>
 </resources>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
@@ -39,9 +40,21 @@ public class InsertView extends AppCompatActivity implements IInsertVMP.view{
         btnInsertar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.obtenerDatos();
+                if(visError()){
+                    etIdApartment.setError(getString(R.string.campoEmpty));
+                    etNombre.setError(getString(R.string.campoEmpty));
+                    etNumber.setError(getString(R.string.campoEmpty));
+                    etParqueadero.setError(getString(R.string.campoEmpty));
+                }else{
+                    presenter.obtenerDatos();
+                }
+
             }
         });
+    }
+
+    public boolean visError(){
+        return (TextUtils.isEmpty(etIdApartment.getEditText().getText().toString().trim()) || TextUtils.isEmpty(etNombre.getEditText().getText().toString().trim()) || TextUtils.isEmpty(etNumber.getEditText().getText().toString().trim()) || TextUtils.isEmpty(etParqueadero.getEditText().getText().toString().trim())) ? true:false;
     }
 
     public Context getMyContext(){
@@ -54,21 +67,21 @@ public class InsertView extends AppCompatActivity implements IInsertVMP.view{
     }
 
     public String getIdApartment(){
-        return etIdApartment.getEditText().getText().toString();
+        return etIdApartment.getEditText().getText().toString().trim();
     }
 
     @Override
     public String getNombre() {
-        return etNombre.getEditText().toString();
+        return etNombre.getEditText().getText().toString().trim();
     }
 
     public String getNumber(){
-        return etNumber.getEditText().getText().toString();
+        return etNumber.getEditText().getText().toString().trim();
     }
 
     @Override
     public String getParqueadero() {
-        return etParqueadero.getEditText().toString();
+        return etParqueadero.getEditText().getText().toString().trim();
     }
 
 }

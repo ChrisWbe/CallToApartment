@@ -1,6 +1,11 @@
 package com.example.calltoapartment.Call;
 
 
+import android.content.Context;
+import android.widget.Toast;
+
+import com.example.calltoapartment.DBNumbers.DataBaseNumbers;
+
 public class CallModel implements ICallVMP.model {
 
     private ICallVMP.presenter presenter;
@@ -11,10 +16,10 @@ public class CallModel implements ICallVMP.model {
     }
 
     @Override
-    public void ordenLlamada(int numero) {
-        if(numero==123456){
-            String dial = "tel:"+numero;
-            presenter.iniciarLlamada(dial);
-        }
+    public void ordenLlamada(String numero, Context context) {
+        DataBaseNumbers db = new DataBaseNumbers(context);
+        String dial = "tel:"+db.getNumberDate(numero);
+        presenter.iniciarLlamada(dial);
+
     }
 }

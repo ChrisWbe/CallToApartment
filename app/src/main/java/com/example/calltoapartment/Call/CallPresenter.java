@@ -13,8 +13,7 @@ public class CallPresenter implements ICallVMP.presenter{
 
     @Override
     public void clickEnterNumber() {
-        model.ordenLlamada(Integer.valueOf(view.getNumber()));
-
+        model.ordenLlamada(view.getNumber(), view.myContext());
     }
 
     @Override

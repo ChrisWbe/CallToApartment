@@ -20,6 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inApart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/n_apartment"
@@ -40,6 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/rbTypeTel">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inNum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/n_llamada"
@@ -60,6 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etIdApartment">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/nombre_apartment"
@@ -94,6 +97,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etNumber">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inParq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/n_parqueadero"

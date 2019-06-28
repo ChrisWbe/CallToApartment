@@ -6,17 +6,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.calltoapartment.R;
 
-public class Adapter extends ArrayAdapter {
+public class AdapterInfo extends ArrayAdapter {
     String[] nombres;
     String[] apartamentos;
     String[] parqueaderos;
-    public Adapter(Context context, String[] nombres, String[] apartamentos, String[] parqueaderos){
+    public AdapterInfo(Context context, String[] nombres, String[] apartamentos, String[] parqueaderos){
         super(context, R.layout.cardviewvis, R.id.tvNApart, apartamentos);
         this.nombres=nombres;
         this.apartamentos=apartamentos;
